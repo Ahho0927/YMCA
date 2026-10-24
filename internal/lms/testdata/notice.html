@@ -1,0 +1,12 @@
+<form action="/lms/logout/;SID=fixture"><a class="logoutButton">Logout</a></form>
+<div class="contentsColumn"><form id="infr_form" method="post" action="/lms/infrInfr/;SID=fixture"><input type="hidden" name="infId" value="INF-example"><input type="hidden" name="infType" value="02"><input type="hidden" name="fileId" value="">
+<table class="cs_table3a">
+<tr><th>発信者</th><td>Example Office</td><th>分類</th><td>担当教員から</td></tr>
+<tr><th>公開開始日時</th><td>-</td><th>公開終了日時</th><td>2026/10/31 (土) 24:00</td></tr>
+<tr><th>発信日時</th><td>2026/10/15 (木) 12:33</td><th>更新日時</th><td>2026/10/15 (木) 12:33</td></tr>
+<tr><th>タイトル</th><td colspan="3">Example notice</td></tr>
+<tr><th>関連講義名</th><td colspan="3">Example course</td></tr>
+<tr><th>内容</th><td colspan="4"><p>First line<br>Second line</p><p>Next paragraph</p></td></tr>
+<tr><th>添付ファイル</th><td colspan="3"><a onclick="formDownload('FIL-example')">example.pdf</a></td></tr>
+</table></form></div>
+<script>function formDownload(fileId){var userAgent=navigator.userAgent;$("#infr_form input[name='fileId']").val(fileId);$('#infr_form').attr('action','/lms/download/file;SID=fixture');if(userAgent.indexOf("iPad")>-1){$('#infr_form').attr('target','_blank');}$('#infr_form').submit();}</script>

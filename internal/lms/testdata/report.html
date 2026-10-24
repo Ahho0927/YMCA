@@ -1,0 +1,6 @@
+<form action="/lms/logout/;SID=fixture"><a class="logoutButton">Logout</a></form>
+<div class="contentsColumn"><form id="rptc_form" action="/lms/rptsRptc/entryReport;SID=fixture" method="post"><input name="TOKEN" type="hidden" value="fixture">
+<table class="cs_table3a"><tr><th>提出期間</th><td>2026/10/15 (木) 24:00 まで</td></tr><tr><th>状況</th><td>未提出</td><th>提出後の訂正</th><td>可</td></tr></table>
+<h3>課題文</h3><script>var subjectCon = '&lt;p&gt;Read the example.&lt;br&gt;Write your own answer.&lt;/p&gt;';subjectCon = decodeURIComponent(subjectCon);$('#HTMLEditor_subject').html(subjectCon);</script><div id="HTMLEditor_subject"></div>
+<h3>回答内容</h3><textarea name="answer">PRIVATE DRAFT MUST NOT APPEAR</textarea><a onclick="repoSubmit()">提出</a></form></div>
+<script>function repoSubmit(){$('#rptc_form').attr('action','/lms/rptsRptc/entryReport;SID=fixture').submit();}</script>

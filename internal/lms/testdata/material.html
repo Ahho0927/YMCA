@@ -1,0 +1,5 @@
+<form action="/lms/logout/;SID=fixture"><a class="logoutButton">Logout</a></form>
+<div class="contentsColumn"><form id="srcl_form" method="post" action="/lms/srcsSrcl/;SID=fixture"><input type="hidden" name="fileId"><input type="hidden" name="syosaiId"><input type="hidden" name="returnPath" value="corsColl"><input type="hidden" name="mtupdate" value="fixture">
+<p id="mat">資料</p><table class="courseTable3"><tr><th>No.1</th><td><img alt="ファイル資料"><a onclick="downloadFile('FIL-example','SRS-example');">example.pdf</a></td><td>未参照</td><td>登録日:2026/10/08</td></tr></table>
+</form></div>
+<script>function downloadFile(fid,syosaiId){var userAgent=navigator.userAgent;getFileId().val(fid);getSyosaiId().val(syosaiId);$('#srcl_form').attr('action','/lms/srcsSrcl/downloadFile;SID=fixture');if(userAgent.indexOf("iPad")>-1){$('#srcl_form').attr('target','_blank');}$('#srcl_form').submit();function getFileId(){return $("#srcl_form input[name='fileId']");}function getSyosaiId(){return $("#srcl_form input[name='syosaiId']");}}</script>

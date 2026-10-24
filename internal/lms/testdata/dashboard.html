@@ -1,0 +1,23 @@
+<!doctype html><html lang="ja"><body>
+<form action="/lms/logout/;SID=fixture" id="logout"><a class="logoutButton">Logout</a></form>
+<div class="homeProfHeader"><span>受講者</span></div><div class="homeProfName">Example Student</div>
+<div class="last_login_date"><div>前回ログイン</div><div>2025/04/10 12:30</div></div>
+<form id="homeHomlForm" method="post" action="/lms/homeHoml/;SID=fixture">
+<input type="hidden" id="homehomlkougiId" name="kougiId"><input type="hidden" id="homehomlInfId" name="infId"><input type="hidden" id="homehomlInfType" name="infType">
+<select name="nendo"><option value="2026">2026</option><option value="2025" selected>2025</option></select>
+<input type="checkbox" name="checkKiList" value="01"><input type="checkbox" name="checkKiList" value="02">
+<div class="newsBlock"><ul class="newsSubO">2025/04/11 <a onclick="openInfrInfr('INF-example','03')">レポート提出期限通知</a></ul></div>
+<div class="newsBlock"><ul class="newsSubO">2025/04/01 <a onclick="openTpicTpic('0')">System information</a></ul></div>
+<div class="weeklyCourseArea">
+<div class="dayBox"><div class="cpLabel orange">火曜日</div><div class="courseCard"><div class="courseCardInfo">第２限<span class="term">春学期</span></div><div class="courseCardName"><a onclick="formSubmit('KOG-c')"></a>Calculus</div><div class="courseCardUser">Example Teacher</div></div></div>
+<div class="dayBox"><div class="cpLabel orange">月曜日</div>
+<div class="courseCard"><div class="courseCardInfo">第３限<span class="term">春学期</span></div><div class="courseCardName"><a onclick="formSubmit('KOG-a')"></a>日本語</div><div class="courseCardRole">仮登録</div><div class="courseCardUser">Example Teacher</div></div>
+<div class="courseCard"><div class="courseCardInfo">オンデマンド<span class="term">春学期</span></div><div class="courseCardName"><a onclick="formSubmit('KOG-b')"></a>日本語</div><div class="courseCardRole">仮登録</div><div class="courseCardUser">Example Teacher</div></div>
+</div><div class="dayBox"><div class="cpLabel orange">その他</div><div class="courseCard"><div class="courseCardInfo"><span class="term">通年</span></div><div class="courseCardName"><a onclick="formSubmit('KOG-d')"></a>【連絡専用】Student Support</div><div class="courseCardUser">Office</div></div></div>
+</div></form>
+<script>
+var newdata = '01'; var newdata = '02';
+function formSubmit(kougiId){$('#homeHomlForm').attr('action','/lms/homeHoml/linkKougi;SID=fixture');$('#homehomlkougiId:hidden').attr('value',kougiId);$('#homeHomlForm').submit();}
+function openInfrInfl(infType){$('#homeHomlForm').attr('action','/lms/infrInfl/;SID=fixture');$('#homehomlInfType').attr('value',infType);$('#homeHomlForm').submit();}
+function openInfrInfr(infId,infType){$('#homeHomlForm').attr('action','/lms/infrInfr/;SID=fixture');$('#homehomlInfId').attr('value',infId);$('#homehomlInfType').attr('value',infType);$('#homeHomlForm').submit();}
+</script></body></html>

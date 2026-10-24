@@ -1,0 +1,7 @@
+<form action="/lms/logout/;SID=fixture"><a class="logoutButton">Logout</a></form>
+<form id="list_form" action="/lms/infrInfl/;SID=fixture" method="post"><input name="page" value="1" type="hidden"><input name="limit" value="10" type="hidden"><input name="infType" value="00" type="hidden"><input name="infId" value="" type="hidden"><input name="allTransitionFlg" value="" type="hidden"></form>
+<div class="contentsColumn"><div id="list_block"></div></div>
+<script>
+$(function(){loadBlock('#list_block','#list_form','/lms/infrInal/index;SID=fixture',true);});
+function clickTitle(infId){$("#list_form input[name='infId']").val(infId);$("#list_form input[name='allTransitionFlg']").val(infId);$('#list_form').attr('action','/lms/infrInfr/index;SID=fixture');$('#list_form').submit();}
+</script>

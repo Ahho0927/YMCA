@@ -1,0 +1,25 @@
+<!doctype html><html lang="ja"><body>
+<form action="/lms/logout/;SID=fixture"><a class="logoutButton">Logout</a></form>
+<div class="breadCrumbBar"><ul><li>HOME</li><li><a><p class="textoverflow">Example course[English title][801105Z]</p></a></li></ul></div>
+<div class="courseName">Example course[English title]</div>
+<form id="list_form" method="post" action="/lms/corsColl/invokeLoad;SID=fixture"></form>
+<div class="contentsColumn"><form id="main_form" method="post" action="/lms/corsColl/;SID=fixture">
+<input type="hidden" id="kyozaiId" name="kyozaiId"><input type="hidden" id="kyozaiSyCdHidden" name="kyozaiSyCdHidden">
+<div id="list_block"><div class="courseListTable kyozai_table"><table class="tableFixedSet">
+<tr><th>名称</th><th>公開期限</th><th>授業実施日</th><th>出欠</th></tr>
+<tr class="accordionHeader jyugyoHidden"><td><span class="courseFolderName">第１回</span></td><td>‐</td><td>2026/10/08</td><td>出席</td></tr>
+<tr class="accordionContents hide kyozaiHidden"><td colspan="5"><div id="list_table0"><input type="hidden" name="TOKEN" value="fixture"><table id="table0" class="tableFixedSet">
+<tr><th class="hide"></th><th>教材名</th><th>公開期限</th><th>状況</th></tr>
+<tr><td class="hide"></td><td id="SRY-example"><img alt="資料">資料 <a onclick="kyozaiTitleLink('SRY-example','01')">Example PDF</a></td><td>‐</td><td><span class="materialLabe">未参照</span></td></tr>
+</table></div></td></tr>
+<tr class="accordionHeader jyugyoHidden"><td><span class="courseFolderName">第２回（オンデマンド）</span></td><td>‐</td><td>2026/10/15</td><td></td></tr>
+<tr class="accordionContents hide kyozaiHidden"><td colspan="5"><div id="list_table1"><table id="table1" class="tableFixedSet"><p>Read the example.<br>Keep this line break.</p>
+<tr><th class="hide"></th><th>教材名</th><th>公開期限</th><th>状況</th></tr>
+<tr><td class="hide"></td><td id="RPT-example"><img alt="レポート">レポート <a onclick="kyozaiTitleLink('RPT-example','02')">Example report</a></td><td>2026/10/21 24:00</td><td><span class="materialLabe">未提出</span></td></tr>
+<tr><td class="hide"></td><td id="TES-example"><img alt="テスト">テスト <a onclick="kyozaiTitleLink('TES-example','03')">Example test</a></td><td>2026/10/21 24:00</td><td><span class="materialLabe">未実施</span></td></tr>
+</table></div></td></tr>
+</table></div></div></form></div>
+<script>
+$(function(){loadBlock('#list_block','#list_form');});
+function kyozaiTitleLink(l_kyozaiId,l_kyozaiSyCd){$('#kyozaiId').attr("value",l_kyozaiId);$('#kyozaiSyCdHidden').attr("value",l_kyozaiSyCd);$("#main_form").attr('action','/lms/corsColl/linkKyozaiTitle;SID=fixture');$("#main_form").submit();}
+</script></body></html>
